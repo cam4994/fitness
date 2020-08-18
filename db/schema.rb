@@ -27,12 +27,16 @@ ActiveRecord::Schema.define(version: 2020_08_18_154340) do
     t.string "sets"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["exercise_id"], name: "index_plan_exercises_on_exercise_id"
+    t.index ["plan_id"], name: "index_plan_exercises_on_plan_id"
   end
 
   create_table "plans", force: :cascade do |t|
     t.string "name"
     t.string "difficulty"
     t.string "commitment"
+    t.string "image"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -54,6 +58,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_154340) do
     t.integer "plan_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_user_plans_on_plan_id"
+    t.index ["user_id"], name: "index_user_plans_on_user_id"
   end
 
   create_table "user_recipes", force: :cascade do |t|
@@ -61,6 +67,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_154340) do
     t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_user_recipes_on_recipe_id"
+    t.index ["user_id"], name: "index_user_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

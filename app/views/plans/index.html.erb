@@ -1,0 +1,6 @@
+<% @plans.each do |plan| %>
+    <h1><%= plan.name %></h1>
+    <h3><%= plan.difficulty %></h3>
+    <h3><%= plan.commitment %></h3>
+    <%= image_tag(plan.image, size: "128") %>
+<% end %>

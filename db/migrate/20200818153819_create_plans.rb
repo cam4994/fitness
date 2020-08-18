@@ -4,6 +4,8 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :difficulty
       t.string :commitment
+      t.string :image
+      t.string :description
 
       t.timestamps
     end

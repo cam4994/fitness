@@ -1,0 +1,29 @@
+<h1><%= @plan.name %></h1>
+<h5>Recommended: <%= @plan.commitment %></h5>
+<h5>Difficulty: <%= @plan.difficulty %></h5> 
+
+<h3> Choose this plan if </h3>
+<p><%= @plan.description %></p><br>
+
+<h3> List of Exercises </h3>
+<ul>
+    <% @plan.exercises.each do |exercise| %>
+        <li><%= link_to exercise.name, exercise_path(exercise) %></l1>
+    <% end %>
+</ul>
+<br><br>
+<%= form_for @user_plan do |f| %> 
+    <%= f.hidden_field :plan_id, value: @plan.id %>
+    <%= f.hidden_field :user_id, value: current_user %>
+
+
+    <%= f.submit "Add to My Plans" %>
+<% end %>
+
+<% if @user_plan.errors.any? %>
+    <ul>
+    <% @plan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+    </ul>
+<% end %>
