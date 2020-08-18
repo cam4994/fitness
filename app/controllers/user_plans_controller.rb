@@ -6,6 +6,7 @@ class UserPlansController < ApplicationController
             redirect_to user_path(@user_plan.user)
         else
             @plan = @user_plan.plan
+            puts current_user
             @plan.errors.add(:base, "Must be logged in to add plans.")
             render '/plans/show'
         end

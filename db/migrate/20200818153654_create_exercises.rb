@@ -5,6 +5,7 @@ class CreateExercises < ActiveRecord::Migration[6.0]
       t.string :category
       t.string :equipment
       t.string :description
+      t.string :image
 
       t.timestamps
     end
