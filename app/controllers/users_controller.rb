@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
     def new 
         @user = User.new
     end
@@ -9,13 +10,15 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            redirect_to new_user_path
+            render 'new'
         end
 
 
     end
 
     def show 
+        # Prevent users from seeing another users page
+        return head(:forbidden) unless params[:id] == current_user.to_s
         @user = User.find(params[:id])
     end
 

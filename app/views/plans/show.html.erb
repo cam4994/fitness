@@ -20,9 +20,20 @@
     <%= f.submit "Add to My Plans" %>
 <% end %>
 
-<% if @user_plan.errors.any? %>
+<% # Error if there is no user signed in and they try to save a plan %>
+<% if @plan.errors.any? %>
     <ul>
     <% @plan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+    </ul>
+<% end %>
+
+
+<% # Validation Error for duplicate plans %>
+<% if current_user && @user_plan.errors.any? %>
+    <ul>
+    <% @user_plan.errors.full_messages.each do |message| %>
         <li><%= message %></li>
     <% end %>
     </ul>

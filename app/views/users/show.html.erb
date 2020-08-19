@@ -1,1 +1,16 @@
-<h1>My Page</h1>
+<h1>My Routines</h1>
+<% @user.plans.each do |plan| %>
+    <h2><%= plan.name %></h2>
+    <h5>Recommended: <%= plan.commitment %></h5>
+    <h5>Difficulty: <%= plan.difficulty %></h5> 
+
+    <h3> Choose this plan if </h3>
+    <p><%= plan.description %></p><br>
+
+    <h3> List of Exercises </h3>
+    <ul>
+        <% plan.exercises.each do |exercise| %>
+            <li><%= link_to exercise.name, exercise_path(exercise) %></l1>
+        <% end %>
+    </ul>
+<% end %>

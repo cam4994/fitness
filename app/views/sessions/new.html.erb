@@ -5,3 +5,7 @@
     <br>
     <%= submit_tag "Submit" %>
 <% end %>
+
+<% if @error %>
+    <li><%= @error %></li>
+<% end %>

@@ -8,7 +8,17 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
-            redirect_to '/login'
+            if @user == nil 
+                @error = "That user does not exist." 
+            else
+                @error = "Password is incorrect."
+            end
+            render 'new'
         end
+    end
+
+    def destroy
+        session.delete :user_id
+        redirect_to '/login'
     end
 end

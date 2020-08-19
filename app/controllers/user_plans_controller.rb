@@ -6,7 +6,10 @@ class UserPlansController < ApplicationController
             redirect_to user_path(@user_plan.user)
         else
             @plan = @user_plan.plan
-            @plan.errors.add(:base, "Must be logged in to add plans.")
+            # Check if user_plan didn't save due to having no user logged in 
+            if @user_plan.user == nil
+                @plan.errors.add(:base, "Must be logged in to add plans.")
+            end
             render '/plans/show'
         end
     end

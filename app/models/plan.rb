@@ -9,4 +9,22 @@ class Plan < ApplicationRecord
             exercise.name 
         end
     end
+
+    def self.beginner
+        self.all.select do |plan|
+            plan.difficulty == "Beginner"
+        end
+    end
+
+    def self.moderate
+        self.all.select do |plan|
+            plan.difficulty == "Moderate"
+        end
+    end
+
+    def self.advanced
+        self.all.select do |plan|
+            plan.difficulty == "Advanced"
+        end
+    end
 end
