@@ -1,21 +1,55 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+html { 
+    background: url(background1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h1 {
+    font-family: "Bookman Old Style";
+   font-size: 42px;
+   text-align: center;
+   color: rgb(245, 240, 240);
+   padding: 12px 0;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+  }
+
 .center {
     text-align: center;
+    margin: auto;
+    margin-top: 160px;
+    margin-right: 350px;
+    margin-left: 350px;
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: medium;
+    background-color: seashell;
    }
 input[type="text"], input[type="password"] {
     margin: auto;
 }
 
-   input[value="Log In"] {
-    padding: 10px 16px;
-    font-size: 18px;
-    text-transform: uppercase;
-    border: none;
-    background-color: hsl(221, 58%, 43%);
+   input[value="Log In"]  {
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 20px;
+    background-color: #ed563b;
     color: #fff;
-    font-weight: bold;
-    margin: auto;
-    cursor: pointer;
-   }
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all .3s;
+  }
+  
+  input[value="Log In"]:hover {
+    background-color: #f9735b;
+  }
+
+  input[value="Create New User"]:hover {
+    background-color: #5bf98a;
+  }
