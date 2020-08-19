@@ -1,8 +1,26 @@
-<% @plans.each do |plan| %>
-    <h1><%= plan.name %></h1>
-    <h3><%= plan.difficulty %></h3>
-    <h3><%= plan.commitment %></h3>
-    <%= image_tag(plan.image, size: "128") %><br>
-    <%= button_to "View Plan", plan_path(plan), method: :get %>
-    <br>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'plans', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <body>
+            <% @plans.each do |plan| %>
+                <div class= "border-plan">
+                    <h1><%= plan.name %></h1>
+                    <h3><%= plan.difficulty %></h3>
+                    <h3><%= plan.commitment %></h3>
+                    <%= image_tag(plan.image, size: "256") %><br>
+                    <%= button_to "View Plan", plan_path(plan), method: :get %>
+                    <br>
+                </div>
+            <% end %>
+        
+
+    </body>
+</html>

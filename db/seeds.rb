@@ -120,5 +120,10 @@ PlanExercise.create(plan: plan7, exercise: pushup, sets: "3 sets to failure")
 plan8= Plan.create(name: "Push-Up Overload", difficulty: "Beginner", commitment: "2-3 times per week", image: "pushups.jpg", description: "This plan is for anyone that needs a chest workout without weights. This plan will help build strength and define the chest muscles.")
 PlanExercise.create(plan: plan8, exercise: pushup, sets: "500 pushups throughout the day. However many sets it takes.")
 
-
+plan9= Plan.create(name: "Arm Blaster", difficulty: "Moderate", commitment: "1-2 times per week", image: "arm.jpg", description: "This plan is for anyone looking to increase the size of their arms or get them more defined.")
+PlanExercise.create(plan: plan9, exercise: bench_press, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan9, exercise: dumbbell_press, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan9, exercise: dumbbell_fly, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan9, exercise: cable_fly, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan9, exercise: pushup, sets: "3 sets to failure")
 

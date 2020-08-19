@@ -1,40 +1,60 @@
-<h1><%= @plan.name %></h1>
-<h5>Recommended: <%= @plan.commitment %></h5>
-<h5>Difficulty: <%= @plan.difficulty %></h5> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<h3> Choose this plan if </h3>
-<p><%= @plan.description %></p><br>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<h3> List of Exercises </h3>
-<ul>
-    <% @plan.plan_exercises.each do |plan_exercise| %>
-        <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
+  <body>
+
+    <div>
+        <h1><%= @plan.name %></h1>
+        <h5>Recommended: <%= @plan.commitment %></h5>
+        <h5>Difficulty: <%= @plan.difficulty %></h5> 
+
+        <h3> Choose this plan if </h3>
+        <p><%= @plan.description %></p><br>
+
+        <h3> List of Exercises </h3>
+        <ul>
+            <% @plan.plan_exercises.each do |plan_exercise| %>
+                <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
+            <% end %>
+        </ul>
+    </div>
+
+    <br><br>
+    <%= form_for @user_plan do |f| %> 
+        <%= f.hidden_field :plan_id, value: @plan.id %>
+        <%= f.hidden_field :user_id, value: current_user %>
+
+
+        <%= f.submit "Add to My Plans" %>
     <% end %>
-</ul>
-<br><br>
-<%= form_for @user_plan do |f| %> 
-    <%= f.hidden_field :plan_id, value: @plan.id %>
-    <%= f.hidden_field :user_id, value: current_user %>
 
-
-    <%= f.submit "Add to My Plans" %>
-<% end %>
-
-<% # Error if there is no user signed in and they try to save a plan %>
-<% if @plan.errors.any? %>
-    <ul>
-    <% @plan.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <% # Error if there is no user signed in and they try to save a plan %>
+    <% if @plan.errors.any? %>
+        <ul>
+        <% @plan.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+        </ul>
     <% end %>
-    </ul>
-<% end %>
 
 
-<% # Validation Error for duplicate plans %>
-<% if current_user && @user_plan.errors.any? %>
-    <ul>
-    <% @user_plan.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <% # Validation Error for duplicate plans %>
+    <% if current_user && @user_plan.errors.any? %>
+        <ul>
+        <% @user_plan.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+        </ul>
     <% end %>
-    </ul>
-<% end %>
+
+
+  </body>
+</html>
