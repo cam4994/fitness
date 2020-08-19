@@ -1,8 +1,17 @@
-<% @plans.each do |plan| %>
-    <h1><%= plan.name %></h1>
-    <h3><%= plan.difficulty %></h3>
-    <h3><%= plan.commitment %></h3>
-    <%= image_tag(plan.image, size: "128") %><br>
-    <%= button_to "View Plan", plan_path(plan), method: :get %>
-    <br>
-<% end %>
+<div class="title-container">
+    <h1>Plans</h1>
+    </div>
+
+<div class="plans">
+  <% @plans.each do |plan| %>
+    <div class="plan">
+      <h2><%= plan.name %></h1>
+        <h3><%= plan.difficulty %></h3>
+        <h3><%= plan.commitment %></h3>
+          <div class = "plan_img">
+            <%= image_tag(plan.image, size: "128") %><br>
+          </div>
+        <%= button_to "View Plan", plan_path(plan), method: :get %><br>
+    </div>
+  <% end %>
+ </div>

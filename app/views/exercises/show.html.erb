@@ -1,8 +1,13 @@
+<div class="header">
 <h1><%= @exercise.name %><h1>
+</div>
+
 <h3>Category: <%= @exercise.category %></h3>
 <h3>Equipment Needed: <%= @exercise.equipment %></h3>
 <h4>Description </h4>
 <p><%= @exercise.description %></p>
+
+<div class="image">
 <% if @exercise.image %>
     <%= image_tag(@exercise.image, size: "512") %>
 <% end %>
