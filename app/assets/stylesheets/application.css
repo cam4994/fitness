@@ -53,6 +53,37 @@ body {
    background-color: hsl(130, 58%, 43%);
    color: #fff;
    font-weight: bold;
-   margin: 24px 0 0 0;
+   margin: auto;
    cursor: pointer;
+  }
+
+  input[value="Log Out"] {
+    padding: 10px 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    background-color: hsl(221, 58%, 43%);
+    color: #fff;
+    font-weight: bold;
+    margin: auto;
+    cursor: pointer;
+   }
+
+
+  .nav_links {
+    color: rgb(4, 0, 255);
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .nav_links :hover{
+    color:#0088a9
+  }
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    align-items: right;
+  }
+  .navbar {
+    text-align: center;
   }
