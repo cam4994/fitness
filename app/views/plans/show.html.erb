@@ -7,8 +7,8 @@
 
 <h3> List of Exercises </h3>
 <ul>
-    <% @plan.exercises.each do |exercise| %>
-        <li><%= link_to exercise.name, exercise_path(exercise) %></l1>
+    <% @plan.plan_exercises.each do |plan_exercise| %>
+        <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
     <% end %>
 </ul>
 <br><br>
