@@ -1,11 +1,29 @@
-<h3>Login</h3>
-<%= form_tag login_path do %>
-    Username: <%= text_field_tag :username %><br>
-    Password: <%= password_field_tag :password %><br>
-    <br>
-    <%= submit_tag "Submit" %>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<% if @error %>
-    <li><%= @error %></li>
-<% end %>
+    <%= stylesheet_link_tag 'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <body>
+        <div class="center">
+
+            <%= form_tag login_path do %>
+                Username <%= text_field_tag :username %><br>
+                Password <%= password_field_tag :password %><br>
+                <%= submit_tag "Log In" %>
+            <% end %>
+
+            <h2> OR </h2>
+            <%= button_to "Create New User", new_user_path, method: :get %>
+
+            <% if @error %>
+                <li><%= @error %></li>
+            <% end %>
+        </div>
+    </body>
+</html>
