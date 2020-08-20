@@ -1,12 +1,22 @@
+
+ /* added background image and font changes  */
 body {
+  /* background-image: url("https://media1.popsugar-assets.com/files/thumbor/7NvXrUxR1XBjpYeKPhI-ywNH63g/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/05/14/030/n/1922729/6978f89d348efe66_ClassPass_Zoom-background_4/i/Weightlifting-Gym-Zoom-Background.jpg"); 
+  background-attachment: fixed;
+  background-position: auto;
+  background-size: cover; */
+background-color: black;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #3E3E3E;
-  margin: 0;
-}
+    font-size: 16px;
+    color: #3E3E3E;
+    margin: 0;
+  }
+
 main {
  padding: 6px 64px;
 }
+
+
 header h1 {
  font-size: 34px;
  text-align: center;
@@ -16,9 +26,11 @@ header h1 {
  letter-spacing: 5px;
 }
 h2 {
- text-transform: uppercase;
- font-size: 26px;
-}
+  font-family: 'Baloo Chettan 2', cursive;
+  color: #2A75B3;
+  text-transform: uppercase;
+  font-size: 26px;
+ }
 ul {
  padding: 0;
  list-style: none;
@@ -87,4 +99,7 @@ input[value="Log Out"] {
 }
 .navbar {
   text-align: center;
+  background-color: rgba(255, 136, 0, 0.959);
+  border-style:solid;
+  border-color: white;
 }

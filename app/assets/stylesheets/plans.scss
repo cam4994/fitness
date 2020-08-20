@@ -9,6 +9,11 @@
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
+    background-color: rgba(156, 155, 155, 0.945);
+}
+.border-plan h3 {
+  color: white;
+  font-weight: 100;
 }
 
 .error {
@@ -16,11 +21,12 @@
   color: red;
   font-weight: bolder;
   font-size: 20px;
+  background-color: white;
 }
 
 // altered the font and color
 h1 {
-  font-family: 'Cooper Black';
+  font-family: 'Cooper Black', cursive;
    text-align: center;
 	font-size: 44px;
 	-webkit-text-stroke: 1px black;
@@ -30,12 +36,13 @@ h1 {
    letter-spacing: 5px;
 }
   
-  .top {
-    position:absolute;
-    top:0;
-    left:0;
-    color: rgb(0, 0, 0);
-  }
+
+.top {
+  position:absolute;
+  top:0;
+  left:10px;
+  color: rgb(0, 0, 0);
+}
 
   input[value="Add to My Plans"]:hover {
     background-color: #5bf98a;
@@ -100,7 +107,20 @@ h1 {
   text-align: center;
 }
 
-h3 {
+.plan h3 {
   font-family: 'Baloo Chettan 2', cursive;
-  color: rgba(250, 10, 10, 0.753);
+  color: white;
 }
+.plan h5{
+  color: white;
+ 
+  font-family: 'Cooper Black';
+  
+}
+
+.border-plan h3 {
+  font-family: 'Baloo Chettan 2', cursive;
+    color: white;
+   
+  font-size: 32px;
+  }

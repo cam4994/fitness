@@ -25,11 +25,13 @@
       <p><%= plan.description %></p><br>
     
       <h3> List of Exercises </h3>
+      <div class="plan_index">
       <ul>
           <% plan.plan_exercises.each do |plan_exercise| %>
               <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
           <% end %>
       </ul>
+        </div>
   </div>
   <% end %>
   </div>

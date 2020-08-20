@@ -11,6 +11,16 @@
 
   <body>
     <h3 class="top">GET THIS BREAD FITNESS</h3>
+        <%# added a category menu for consistant nav %>
+        <div class="categories">
+          <%= link_to "Chest", '/category/chest' %>
+          <%= link_to "Arms", '/category/arms' %>
+          <%= link_to "Shoulders", '/category/shoulders' %>
+          <%= link_to "Back", '/category/back' %>
+          <%= link_to "Legs", '/category/legs' %>
+          <%= link_to "Abs", '/category/abs' %>
+          <%= link_to "Cardio", '/category/cardio' %>
+        </div>
     <div class="border-plan">
       <h1><%= @exercise.name %><h1>
 

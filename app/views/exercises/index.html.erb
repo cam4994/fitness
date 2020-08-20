@@ -21,10 +21,13 @@
           <%= link_to "Cardio", '/category/cardio' %>
         </div>
         <h1>All Exercises</h1>
-        <ul>
+       <%# added div %>
+       <div class="exercise_index">
+       <ul>
             <% @exercises.each do |exercise| %>
                 <li><%= link_to exercise.name, exercise_path(exercise)%></li>
             <% end %>
-        </ul>
+       </ul>
+       </div>
     </body>
 </html>
