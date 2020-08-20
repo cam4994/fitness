@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/difficulty/moderate', to: 'plans#moderate'
   get '/difficulty/beginner', to: 'plans#beginner'
   get '/difficulty/advanced', to: 'plans#advanced'
+  get '/category/:id', to: 'exercises#category'
 end

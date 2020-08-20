@@ -15,13 +15,13 @@
                 <div class= "border-plan">
                     <h1><%= plan.name %></h1>
                     <% if plan.difficulty == "Beginner" %>
-                      <h3><%= link_to plan.difficulty, difficulty_beginner_path %></h3>
+                      <h3 class="beginner"><%= link_to plan.difficulty, difficulty_beginner_path %></h3>
                     <% elsif plan.difficulty == "Moderate" %>
-                      <h3><%= link_to plan.difficulty, difficulty_moderate_path %></h3>
+                      <h3 class="moderate"><%= link_to plan.difficulty, difficulty_moderate_path %></h3>
                     <% else %>
                       <h3><%= link_to plan.difficulty, difficulty_advanced_path %></h3>
                     <% end %>
-                    <h3><%= plan.commitment %></h3>
+                    <h3 class="advanced"><%= plan.commitment %></h3>
                     <%= image_tag(plan.image, size: "256") %><br>
                     <%= button_to "View Plan", plan_path(plan), method: :get %>
                     <br>

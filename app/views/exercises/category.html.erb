@@ -12,15 +12,15 @@
     <body>
         <h3 class="top">GET THIS BREAD FITNESS</h3>
         <div class="categories">
-          <%= link_to "Chest", '/category/chest' %>
-          <%= link_to "Arms", '/category/arms' %>
-          <%= link_to "Shoulders", '/category/shoulders' %>
-          <%= link_to "Back", '/category/back' %>
-          <%= link_to "Legs", '/category/legs' %>
-          <%= link_to "Abs", '/category/abs' %>
-          <%= link_to "Cardio", '/category/cardio' %>
+            <%= link_to "Chest", '/category/chest' %>
+            <%= link_to "Arms", '/category/arms' %>
+            <%= link_to "Shoulders", '/category/shoulders' %>
+            <%= link_to "Back", '/category/back' %>
+            <%= link_to "Legs", '/category/legs' %>
+            <%= link_to "Abs", '/category/abs' %>
+            <%= link_to "Cardio", '/category/cardio' %>
         </div>
-        <h1>All Exercises</h1>
+        <h1><%= @exercises.first.category %> Exercises</h1>
         <ul>
             <% @exercises.each do |exercise| %>
                 <li><%= link_to exercise.name, exercise_path(exercise)%></li>

@@ -11,17 +11,18 @@
 
   <body>
     <h3 class="top">GET THIS BREAD FITNESS</h3>
+    <div class="border-plan">
+      <h1><%= @exercise.name %><h1>
 
-    <h1><%= @exercise.name %><h1>
-
-    <h3>Category: <%= @exercise.category %></h3>
-    <h3>Equipment Needed: <%= @exercise.equipment %></h3>
-    <h4>Description </h4>
-    <p><%= @exercise.description %></p>
-    <% if @exercise.image %>
-        <%= image_tag(@exercise.image, size: "512") %>
-    
-    <% end %>
+      <h3>Category: <%= @exercise.category %></h3>
+      <h3>Equipment Needed: <%= @exercise.equipment %></h3>
+      <h4>Description </h4>
+      <p><%= @exercise.description %></p>
+      <% if @exercise.image %>
+          <%= image_tag(@exercise.image, size: "512") %>
+      
+      <% end %>
+    </div>
 
   </body>
 </html>
