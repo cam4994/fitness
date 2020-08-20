@@ -57,7 +57,7 @@ input[type="text"], input[type="password"] {
   li a {
     font-weight: bold;
     color: #ffffff;
-    margin-right: 16px;
+    margin-right: 4px;
    }
   a :hover{
     color:#0088a9
@@ -68,4 +68,8 @@ input[type="text"], input[type="password"] {
     color: red;
     font-weight: bolder;
     font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
   }

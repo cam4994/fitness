@@ -22,9 +22,12 @@
         </div>
         <h1><%= @exercises.first.category %> Exercises</h1>
         <ul>
+            <%# another div %>
+            <div class="exercise_index">
             <% @exercises.each do |exercise| %>
                 <li><%= link_to exercise.name, exercise_path(exercise)%></li>
             <% end %>
         </ul>
+            </div>
     </body>
 </html>

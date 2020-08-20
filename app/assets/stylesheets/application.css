@@ -1,12 +1,19 @@
+
+ /* added background image and font changes  */
 body {
+
+background-color: black;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #3E3E3E;
-  margin: 0;
-}
+    font-size: 16px;
+    color: #3E3E3E;
+    margin: 0;
+  }
+
 main {
  padding: 6px 64px;
 }
+
+
 header h1 {
  font-size: 34px;
  text-align: center;
@@ -16,9 +23,11 @@ header h1 {
  letter-spacing: 5px;
 }
 h2 {
- text-transform: uppercase;
- font-size: 26px;
-}
+  font-family: 'Baloo Chettan 2', cursive;
+  color: #2A75B3;
+  text-transform: uppercase;
+  font-size: 26px;
+ }
 ul {
  padding: 0;
  list-style: none;
@@ -62,6 +71,8 @@ input[value="Log Out"] {
   color:#df5709;
   list-style: none;
   cursor: pointer;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .nav_links :hover{
