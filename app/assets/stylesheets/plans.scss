@@ -9,13 +9,70 @@
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
-  }
+}
 
-   h1 {
-   font-size: 34px;
+h1 {
+  font-family: 'Baloo Chettan 2', cursive;
+  font-size: 34px;
    text-align: center;
-   color: rgb(2, 2, 2);
+   color: rgba(250, 10, 10, 0.753);
    padding: 12px 0;
    text-transform: uppercase;
    letter-spacing: 5px;
+}
+
+.plan {
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-right: 300px;
+    margin-left: 300px;
+    text-align: center;
+}
+  
+.plan h1{ 
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+
+.info {
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-right: 300px;
+    margin-left: 300px;
+    text-align: center;
+}
+
+
+.submit_button{
+  input[type="submit"] {
+      padding: 10px 16px;
+      font-size: 18px;
+      text-transform: uppercase;
+      border: none;
+      background-color: hsla(130, 58%, 43%, 0.74);
+      color: #fff;
+      font-weight: bold;
+      margin: auto;
+      margin-bottom: 50px;
+      cursor: pointer;
   }
+}
+
+.exercise_list {
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  margin-right: 300px;
+  margin-left: 300px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Baloo Chettan 2', cursive;
+  color: rgba(250, 10, 10, 0.753);
+}

@@ -5,37 +5,43 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'plans', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-    <div>
-        <h1><%= @plan.name %></h1>
+    <div class="plan">
+      <h1><%= @plan.name %></h1>
+         <%= image_tag(@plan.image, size: "256") %><br>
+        <div class="info">
         <h5>Recommended: <%= @plan.commitment %></h5>
         <h5>Difficulty: <%= @plan.difficulty %></h5> 
-
+        </div>
+       
         <h3> Choose this plan if </h3>
         <p><%= @plan.description %></p><br>
-
-        <h3> List of Exercises </h3>
-        <ul>
+         
+         <div class= "exercise_list">
+           <h3> List of Exercises </h3>
+            <ul>
             <% @plan.plan_exercises.each do |plan_exercise| %>
-                <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
+              <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
             <% end %>
-        </ul>
-    </div>
+            </ul>
+        </div>
 
     <br><br>
+    <div class="submit_button">
     <%= form_for @user_plan do |f| %> 
         <%= f.hidden_field :plan_id, value: @plan.id %>
         <%= f.hidden_field :user_id, value: current_user %>
 
 
         <%= f.submit "Add to My Plans" %>
+    </div>
     <% end %>
-
+    </div>
     <% # Error if there is no user signed in and they try to save a plan %>
     <% if @plan.errors.any? %>
         <ul>

@@ -8,8 +8,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+ 
   <body>
+
     <header class="navbar  navbar-inverse">
       
     <div class="navbar-class">
@@ -17,12 +18,15 @@
 
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-
+  
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">HOME</a></li>
           <li><%=link_to "Exercises", exercises_path%>
           <%=link_to "Plans", plans_path%>
-          <%= link_to "New Plan", new_plan_path%>
+          <%= link_to "Home", users_path%>
+          
+          <%# do not neeed this link %>
+          <%# <%= link_to "New Plan", new_plan_path%> 
           <% if current_user %>
             <%= button_to "Log Out", signout_path, method: :delete %>
           <% end %>
@@ -31,11 +35,20 @@
 
 
       </div>
+     
+     <%# trying to figure out the logic of an image into the background %>
+     <%# <div class="my-container">
+    <h1>Scotch Scotch Scotch</h1>
+    <img src="http://placekitten.com/1500/1000">
+</div> %>
     </div>
     </header>
-    
+     
     <%= yield %>
 
 
+  
   </body>
+
+
 </html>
