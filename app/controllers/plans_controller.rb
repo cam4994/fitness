@@ -9,4 +9,8 @@ class PlansController < ApplicationController
         @user_plan = UserPlan.new
     end
 
+    def home
+        @plans = Plan.all
+    end
+
 end

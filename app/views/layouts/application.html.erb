@@ -19,19 +19,21 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
 
         <ul class="nav navbar-nav">
-          <li>
-            <a href="/">Home</a>
+          <li class="nav_links">
+            <% if current_user %>
+              <%=link_to "My Plans", user_path(current_user)%>
+            <% else %>
+              <a href="/">Home</a>
+            <% end %>
             <%=link_to "Exercises", exercises_path%>
             <%=link_to "Plans", plans_path%>
-            <% if current_user %>
-              <%= button_to "Log Out", signout_path, method: :delete %>
-            <% end %>
           </li>
         </ul>
-
-
       </div>
     </div>
+    <% if current_user %>
+      <%= button_to "Log Out", signout_path, method: :delete %>
+    <% end %>
   </header>
     
     <%= yield %>

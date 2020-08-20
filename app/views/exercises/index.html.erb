@@ -1,6 +1,21 @@
-<h1>All Exercises</h1>
-<ul>
-  <% @exercises.each do |exercise| %>
-    <li><%= link_to exercise.name, exercise_path(exercise)%></li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fitness</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'exercises', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <body>
+        <h3 class="top">GET THIS BREAD FITNESS</h3>
+        <h1>All Exercises</h1>
+        <ul>
+            <% @exercises.each do |exercise| %>
+                <li><%= link_to exercise.name, exercise_path(exercise)%></li>
+            <% end %>
+        </ul>
+    </body>
+</html>

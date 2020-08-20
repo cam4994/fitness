@@ -19,6 +19,12 @@
    text-transform: uppercase;
    letter-spacing: 5px;
   }
+  .top {
+    position:absolute;
+    top:0;
+    left:0;
+    color: rgb(0, 0, 0);
+  }
 
   input[value="Add to My Plans"]:hover {
     background-color: #5bf98a;
