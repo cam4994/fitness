@@ -9,8 +9,19 @@ class PlansController < ApplicationController
         @user_plan = UserPlan.new
     end
 
-    def home
-        @plans = Plan.all
+    def beginner
+        @plans = Plan.beginner
+        render 'difficulty'
+    end
+
+    def moderate
+        @plans = Plan.moderate
+        render 'difficulty'
+    end
+    
+    def advanced
+        @plans = Plan.advanced
+        render 'difficulty'
     end
 
 end

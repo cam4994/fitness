@@ -62,3 +62,10 @@ input[type="text"], input[type="password"] {
   a :hover{
     color:#0088a9
   }
+
+  .error-message {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+  }

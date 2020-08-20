@@ -10,28 +10,28 @@
   </head>
 
 <body>
-
-<h1>My Routines</h1>
-<div class="plans">
-<% @user.plans.each do |plan| %>
-    <div class="plan">
-    <h2><%= plan.name %></h2>
-    <%# added image for consistency %>
-    <%= image_tag(plan.image, size: "256" )%>
-    <h5>Recommended: <%= plan.commitment %></h5>
-    <h5>Difficulty: <%= plan.difficulty %></h5> 
-    <%# mild change to phrasing %>
-    <h3> Description </h3>
-    <p><%= plan.description %></p><br>
-   
-    <h3> List of Exercises </h3>
-    <ul>
-        <% plan.plan_exercises.each do |plan_exercise| %>
-            <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
-        <% end %>
-    </ul>
- </div>
-<% end %>
-</div>
+  <h3 class="top">GET THIS BREAD FITNESS</h3> 
+  <h1 class="title">My Plans</h1>
+  <div class="plans">
+  <% @user.plans.each do |plan| %>
+      <div class="plan">
+      <h2><%= plan.name %></h2>
+      <%# added image for consistency %>
+      <%= image_tag(plan.image, size: "256" )%>
+      <h5>Recommended: <%= plan.commitment %></h5>
+      <h5>Difficulty: <%= plan.difficulty %></h5> 
+      <%# mild change to phrasing %>
+      <h3> Description </h3>
+      <p><%= plan.description %></p><br>
+    
+      <h3> List of Exercises </h3>
+      <ul>
+          <% plan.plan_exercises.each do |plan_exercise| %>
+              <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
+          <% end %>
+      </ul>
+  </div>
+  <% end %>
+  </div>
  </body>
 </html>

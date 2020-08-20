@@ -96,7 +96,7 @@ PlanExercise.create(plan: plan4, exercise: side_plank, sets: "3 sets of 30 secon
 PlanExercise.create(plan: plan4, exercise: plank, sets: "3 sets of 1 minute holds")
 PlanExercise.create(plan: plan4, exercise: jogging, sets: "20-45 minutes")
 
-plan5= Plan.create(name: "Shredded Core", difficulty: "Moderate", commitment: "2-3 times per week", image: "shredded.jpg", description: "This plan is for those who want to build ab muscle and condition their abs.")
+plan5= Plan.create(name: "Shredded Core", difficulty: "Advanced", commitment: "2-3 times per week", image: "shredded.jpg", description: "This plan is for those who want to build ab muscle and condition their abs.")
 PlanExercise.create(plan: plan5, exercise: ab_roller, sets: "3 sets of 12-15 reps")
 PlanExercise.create(plan: plan5, exercise: reverse_crunch, sets: "3 sets of 15-20 reps")
 PlanExercise.create(plan: plan5, exercise: machine_crunch, sets: "3 sets of 15-20 reps")
@@ -111,7 +111,7 @@ PlanExercise.create(plan: plan6, exercise: dumbbell_press, sets: "4 sets of 6-8 
 PlanExercise.create(plan: plan6, exercise: chest_press, sets: "4 sets of 10-12 reps")
 PlanExercise.create(plan: plan6, exercise: cable_fly, sets: "4 sets of 10-12 reps")
 
-plan7= Plan.create(name: "Toned Chest", difficulty: "Advanced", commitment: "1-2 times per week", image: "toned_chest.jpeg", description: "This plan is for those who want to get a defined chest and build chest strength.")
+plan7= Plan.create(name: "Toned Chest", difficulty: "Moderate", commitment: "1-2 times per week", image: "toned_chest.jpeg", description: "This plan is for those who want to get a defined chest and build chest strength.")
 PlanExercise.create(plan: plan7, exercise: bench_press, sets: "4 sets of 10-12 reps")
 PlanExercise.create(plan: plan7, exercise: dumbbell_press, sets: "4 sets of 10-12 reps")
 PlanExercise.create(plan: plan7, exercise: dumbbell_fly, sets: "4 sets of 10-12 reps")

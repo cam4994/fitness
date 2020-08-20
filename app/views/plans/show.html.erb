@@ -11,7 +11,25 @@
 
   <body>
     <h3 class="top">GET THIS BREAD FITNESS</h3>
-    <div>
+    <div class= "error">
+        <% if @plan.errors.any? %>
+          <ul>
+            <% @plan.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+
+        <% # Validation Error for duplicate plans %>
+        <% if current_user && @user_plan.errors.any? %>
+          <ul>
+            <% @user_plan.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
+    </div>
 
     <div class="plan">
         <h1><%= @plan.name %></h1>
@@ -45,23 +63,6 @@
     </div>
     
 
-    <% if @plan.errors.any? %>
-        <ul>
-        <% @plan.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-        <% end %>
-        </ul>
-    <% end %>
-
-
-    <% # Validation Error for duplicate plans %>
-    <% if current_user && @user_plan.errors.any? %>
-        <ul>
-        <% @user_plan.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-        <% end %>
-        </ul>
-    <% end %>
 
 
   </body>
