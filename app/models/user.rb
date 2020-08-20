@@ -5,6 +5,7 @@ class User < ApplicationRecord
     has_many :plans, through: :user_plans
     has_many :recipes, through: :user_recipes
     validates :username, uniqueness: true 
+    validates :password, length: {minimum: 6}
 
     def exercises
         exercises = []

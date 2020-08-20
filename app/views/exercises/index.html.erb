@@ -11,15 +11,17 @@
 
     <body>
         <h3 class="top">GET THIS BREAD FITNESS</h3>
+
         <div class="categories">
-          <%= link_to "Chest", '/category/chest' %>
-          <%= link_to "Arms", '/category/arms' %>
-          <%= link_to "Shoulders", '/category/shoulders' %>
-          <%= link_to "Back", '/category/back' %>
-          <%= link_to "Legs", '/category/legs' %>
-          <%= link_to "Abs", '/category/abs' %>
-          <%= link_to "Cardio", '/category/cardio' %>
+            <a class="muscle" href='/category/chest'>Chest<a>
+            <a class="muscle" href='/category/arms'>Arms<a>
+            <a class="muscle" href='/category/shoulders'>Shoulders<a>
+            <a class="muscle" href='/category/back'>Back<a>
+            <a class="muscle" href='/category/legs'>Legs<a>
+            <a class="muscle" href='/category/abs'>Abs<a>
+            <a class="muscle" href='/category/cardio'>Cardio<a>
         </div>
+
         <h1>All Exercises</h1>
         <ul>
             <% @exercises.each do |exercise| %>

@@ -172,4 +172,9 @@ PlanExercise.create(plan: plan14, exercise: inverted_row, sets: "4 sets of 10-12
 PlanExercise.create(plan: plan14, exercise: single_row, sets: "4 sets to failure")
 PlanExercise.create(plan: plan14, exercise: burpees, sets: "3 sets of 20-25 reps")
 
+plan15= Plan.create(name: "Death by Cardio", difficulty: "Beginner", commitment: "3-4 times per week", image: "cardio.jpg", description: "This plan is for anyone looking to shred fat off their body.")
+PlanExercise.create(plan: plan15, exercise: stairmaster, sets: "25 minutes")
+PlanExercise.create(plan: plan15, exercise: sprints, sets: "6 spints at 100%"))
+PlanExercise.create(plan: plan15, exercise: burpees, sets: "3 sets of 20-25 reps")
+
 

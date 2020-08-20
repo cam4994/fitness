@@ -47,3 +47,18 @@ input[type="text"], input[type="password"] {
 .title {
     text-align: center;
 }
+
+li {
+    padding: 12px;
+   }
+   li:nth-of-type(2n) {
+    background-color: #80B5E1;
+   }
+   li a {
+    font-weight: bold;
+    color: #3E3E3E;
+    margin-right: 16px;
+   }
+   li:nth-of-type(2n) a {
+    color: #fff;
+   }
