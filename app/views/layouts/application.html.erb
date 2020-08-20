@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+ 
   <body>
   <header class="navbar  navbar-inverse">
       
@@ -17,7 +17,7 @@
 
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-
+  
         <ul class="nav navbar-nav">
           <li class="nav_links">
             <% if current_user %>
@@ -30,6 +30,7 @@
           </li>
         </ul>
       </div>
+     
     </div>
     <% if current_user %>
       <%= button_to "Log Out", signout_path, method: :delete %>
@@ -39,5 +40,8 @@
     <%= yield %>
 
 
+  
   </body>
+
+
 </html>

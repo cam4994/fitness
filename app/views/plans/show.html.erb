@@ -13,19 +13,26 @@
     <h3 class="top">GET THIS BREAD FITNESS</h3>
     <div>
         <h1><%= @plan.name %></h1>
-        <h5>Recommended: <%= @plan.commitment %></h5>
-        <h5>Difficulty: <%= @plan.difficulty %></h5> 
 
+    <div class="plan">
+        <h1><%= @plan.name %></h1>
+        <%= image_tag(@plan.image, size: "256") %><br>
+        <div class="info">
+            <h5>Recommended: <%= @plan.commitment %></h5>
+            <h5>Difficulty: <%= @plan.difficulty %></h5> 
+        </div>
+       
         <h3> Choose this plan if </h3>
         <p><%= @plan.description %></p><br>
-
-        <h3> List of Exercises </h3>
-        <ul>
+         
+        <div class= "exercise_list">
+           <h3> List of Exercises </h3>
+            <ul>
             <% @plan.plan_exercises.each do |plan_exercise| %>
-                <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
+              <li><%= link_to plan_exercise.exercise_name, exercise_path(plan_exercise.exercise) %>---     <%=  plan_exercise.sets %></l1>
             <% end %>
-        </ul>
-    </div>
+            </ul>
+        </div>
 
     <br><br>
     <%= form_for @user_plan do |f| %> 
@@ -34,9 +41,11 @@
 
 
         <%= f.submit "Add to My Plans" %>
-    <% end %>
 
-    <% # Error if there is no user signed in and they try to save a plan %>
+    <% end %>
+    </div>
+    
+
     <% if @plan.errors.any? %>
         <ul>
         <% @plan.errors.full_messages.each do |message| %>
