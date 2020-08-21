@@ -59,6 +59,10 @@ input[value="Log Out"] {
   right:0;
  }
 
+ input[value="Log Out"]:hover {
+   background-color: #be5010;
+ }
+
 
 .nav_links {
   color:#df5709;

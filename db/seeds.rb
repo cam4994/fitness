@@ -34,7 +34,7 @@ deadlift= Exercise.create(name: "Deadlift", category: "Back", equipment: "Barbel
 single_row= Exercise.create(name: "Single-Arm Row", category: "Back", equipment: "Dumbbells", image: "dumbbell_row.gif", description: "Head to a flat bench and place your right hand against it under your shoulder, keeping your arm straight. Rest your right knee on the bench and step your other leg out to the side. With your free hand grab a dumbbell off the floor and row it up to your side until your upper arm is parallel with the floor. Lower slowly back to the floor and repeat.")
 row= Exercise.create(name: "Barbell Row", category: "Back", equipment: "Barbell", description: "Grab a barbell with an overhand grip, hands slightly wider than shoulder width apart. With your legs slightly bent, keep your back perfectly straight and bend your upper body forward until it’s almost perpendicular to the floor. From here row the weight upwards into the lower part of your chest. Return under control to the start position.")
 lat_pulldown= Exercise.create(name: "Lat Pull-Down", category: "Back", equipment: "Lat Machine", image: "latpull.gif", description: "Grab the bar with your palms facing away from you, shoulder-width apart. Lean back slightly and push your chest out. Pull the bar down to your chest, then return slowly to the start position. Your torso should remain still throughout.")
-pullup= Exercise.create(name: "Pull-up", category: "Back", equipment: "Pull-up bar", image: "pull_up.gif", description: "rab the handles of the pull-up station with your palms facing away from you and your arms fully extended. Your hands should be around shoulder-width apart. Squeeze your shoulder blades together, exhale and drive your elbows towards your hips to bring your chin above the bar. Lower under control back to the start position.")
+pullup= Exercise.create(name: "Pull-up", category: "Back", equipment: "Pull-up bar", image: "pull_up.gif", description: "Grab the handles of the pull-up station with your palms facing away from you and your arms fully extended. Your hands should be around shoulder-width apart. Squeeze your shoulder blades together, exhale and drive your elbows towards your hips to bring your chin above the bar. Lower under control back to the start position.")
 dumbbell_row = Exercise.create(name: "Chest Supported Dumbbell Row", category: "Back", equipment: "Dumbbells", image: "chest_row.gif", description: "Lie face down on the bench with your feet other side to keep you stable. Hang the dumbbells beneath you using a neutral grip. Keep your head up and bring your shoulder blades together as you row the weights towards your chest. Lower to the starting position under control.")
 inverted_row= Exercise.create(name: "Inverted Row", category: "Back", equipment: "Barbell", image: "invertedrow.gif", description: "Position yourself with heels out in front of you and arms fully extended. Your body should be straight from shoulders to ankles. Flex at the elbows to pull your chest up to the bar. Lower yourself back to the start position under control.")
 farmers = Exercise.create(name: "Farmers Walk", category: "Back", equipment: "Dumbbells or Kettlebells", image: "farmers.gif", description: "Hold two kettlebells or dumbbells by your side. Keep your arms strong and walk short, quick steps as fast as possible. Turn around and walk back.")
@@ -75,6 +75,13 @@ PlanExercise.create(plan: plan11, exercise: cable_reverse, sets: "4 sets of 10-1
 PlanExercise.create(plan: plan11, exercise: barbell_shrug, sets: "4 sets of 10-12")
 PlanExercise.create(plan: plan11, exercise: stairmaster, sets: "20-30 minutes")
 
+plan13= Plan.create(name: "Back Attack", difficulty: "Moderate", commitment: "1-2 times per week", image: "back1.jpeg", description: "This plan is for anyone looking to gain muscle with an emphasis on their upper back.")
+PlanExercise.create(plan: plan13, exercise: pullup, sets: "4 sets to failure")
+PlanExercise.create(plan: plan13, exercise: row, sets: "4 sets of 8-10 reps")
+PlanExercise.create(plan: plan13, exercise: single_row, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan13, exercise: dumbbell_row, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan13, exercise: farmers, sets: "Hold until your forearms give out. 3 sets")
+PlanExercise.create(plan: plan13, exercise: bike, sets: "20-30 minutes")
 
 plan3= Plan.create(name: "Power Legs", difficulty: "Advanced", commitment: "1-2 times per week", image: "power_legs.jpg", description: "This plan is for those who want to add size on their quads, hamstrings and glutes.")
 PlanExercise.create(plan: plan3, exercise: squats, sets: "5 sets of 4-6 reps")
@@ -83,7 +90,17 @@ PlanExercise.create(plan: plan3, exercise: hack_squat, sets: "4 sets of 6-8 reps
 PlanExercise.create(plan: plan3, exercise: extensions, sets: "4 sets of 10-12 reps")
 PlanExercise.create(plan: plan3, exercise: leg_curls, sets: "4 sets of 10-12 reps")
 
-plan1= Plan.create(name: "Strong Glutes and Thighs", difficulty: "Moderate", commitment: "2-3 times per week", image: "strong_glutes.jpg", description: "This plan is for anyone who wants to build or tone their hips, thighs and glutes.")
+plan10= Plan.create(name: "Captain Arms", difficulty: "Beginner", commitment: "1-2 times per week", image: "captain.jpg", description: "This plan is for anyone looking to have defined arms like Captain America. Your arms will not look like his, but they will look good.")
+PlanExercise.create(plan: plan10, exercise: curls, sets: "4 sets of 8-10 reps")
+PlanExercise.create(plan: plan10, exercise: close_grip, sets: "4 sets of 8-10 reps")
+PlanExercise.create(plan: plan10, exercise: chin_up, sets: "4 sets to failure")
+PlanExercise.create(plan: plan10, exercise: rope, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan10, exercise: preacher_curl, sets: "4 sets of 10-12")
+PlanExercise.create(plan: plan10, exercise: diamond_pushups, sets: "4 sets to failure")
+PlanExercise.create(plan: plan10, exercise: stairmaster, sets: "20-30 minutes")
+
+
+plan1= Plan.create(name: "Booty Poopper Max", difficulty: "Moderate", commitment: "2-3 times per week", image: "strong_glutes.jpg", description: "This plan is for anyone who wants to build or tone their hips, thighs and glutes.")
 PlanExercise.create(plan: plan1, exercise: squats, sets: "4 sets of 8-12 reps")
 PlanExercise.create(plan: plan1, exercise: legpress, sets: "4 sets of 8-12 reps")
 PlanExercise.create(plan: plan1, exercise: jump_squat, sets: "3 sets of 12-15 reps")
@@ -127,16 +144,6 @@ PlanExercise.create(plan: plan9, exercise: ez_curl, sets: "3 sets of 10-12")
 PlanExercise.create(plan: plan9, exercise: dips, sets: "3 sets of 15-20")
 PlanExercise.create(plan: plan9, exercise: waiter_curl, sets: "3 sets to failure")
 
-plan10= Plan.create(name: "Captain Arms", difficulty: "Beginner", commitment: "1-2 times per week", image: "captain.jpg", description: "This plan is for anyone looking to have defined arms like Captain America. Your arms will not look like his, but they will look good.")
-PlanExercise.create(plan: plan10, exercise: curls, sets: "4 sets of 8-10 reps")
-PlanExercise.create(plan: plan10, exercise: close_grip, sets: "4 sets of 8-10 reps")
-PlanExercise.create(plan: plan10, exercise: chin_up, sets: "4 sets to failure")
-PlanExercise.create(plan: plan10, exercise: rope, sets: "4 sets of 10-12 reps")
-PlanExercise.create(plan: plan10, exercise: preacher_curl, sets: "4 sets of 10-12")
-PlanExercise.create(plan: plan10, exercise: diamond_pushups, sets: "4 sets to failure")
-PlanExercise.create(plan: plan10, exercise: stairmaster, sets: "20-30 minutes")
-
-
 
 plan12= Plan.create(name: "Delt Destroyer", difficulty: "Advanced", commitment: "1-2 times per week", image: "delt.jpg", description: "This plan is for anyone looking to bring their deltoids to the next level.")
 PlanExercise.create(plan: plan12, exercise: barbell_press, sets: "4 sets of 8-10 reps")
@@ -146,13 +153,7 @@ PlanExercise.create(plan: plan12, exercise: raises, sets: "3 sets of 10-12 reps"
 PlanExercise.create(plan: plan12, exercise: cable_reverse, sets: "3 sets of 10-12 reps")
 PlanExercise.create(plan: plan12, exercise: front_raises, sets: "3 sets of 10-12")
 
-plan13= Plan.create(name: "Back Attack", difficulty: "Moderate", commitment: "1-2 times per week", image: "back1.jpeg", description: "This plan is for anyone looking to gain muscle with an emphasis on their upper back.")
-PlanExercise.create(plan: plan13, exercise: pullup, sets: "4 sets to failure")
-PlanExercise.create(plan: plan13, exercise: row, sets: "4 sets of 8-10 reps")
-PlanExercise.create(plan: plan13, exercise: single_row, sets: "4 sets of 10-12 reps")
-PlanExercise.create(plan: plan13, exercise: dumbbell_row, sets: "4 sets of 10-12 reps")
-PlanExercise.create(plan: plan13, exercise: farmers, sets: "Hold until your forearms give out. 3 sets")
-PlanExercise.create(plan: plan13, exercise: bike, sets: "20-30 minutes")
+
 
 plan4= Plan.create(name: "Toned Core", difficulty: "Beginner", commitment: "3-4 times per week", image: "toned_core.jpg", description: "This plan is for those who want to tone their mid-section and bring out ab definition.")
 PlanExercise.create(plan: plan4, exercise: v_up, sets: "3 sets of 12-15 reps")
