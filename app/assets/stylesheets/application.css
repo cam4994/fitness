@@ -48,7 +48,7 @@ input[value="Log Out"] {
   font-size: 14px;
   text-transform: uppercase;
   border: none;
-  background-color: hsl(221, 58%, 43%);
+  background-color: #df5709;
   color: #fff;
   font-weight: bold;
   margin: auto;
@@ -78,6 +78,7 @@ input[value="Log Out"] {
 .navbar {
   text-align: center;
 }
+
 a {
   font-weight: bold;
   color: #df5709;
@@ -87,3 +88,4 @@ a {
  a :hover{
   color:white;
 }
+

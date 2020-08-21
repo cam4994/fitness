@@ -11,6 +11,13 @@
     text-align: center;
     background-color: rgba(156, 155, 155, 0.945);
 }
+body {
+  background-image: url("background.jpg");
+  background-attachment: fixed;
+  background-position: auto;
+  background-size: cover;
+}
+
 .border-plan h3 {
   color: white;
   font-weight: 100;
@@ -41,15 +48,15 @@ h1 {
   position:absolute;
   top:0;
   left:10px;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
   input[value="Add to My Plans"]:hover {
-    background-color: #5bf98a;
+    background-color: #f9735b;
   }
 
   input[value="View Plan"]:hover {
-    background-color: #5bf98a;
+    background-color: #f9735b;
   }
   
   
@@ -125,7 +132,8 @@ h1 {
   font-size: 32px;
   }
   a:visited { 
-    text-decoration: none; color:#df5709; 
+    text-decoration: none; 
+    color:#df5709; 
   }
   a {
     text-decoration: none;

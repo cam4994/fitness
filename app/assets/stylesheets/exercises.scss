@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
     color: #fcf8f8;
     margin: 0;
     background-image: url("background7.jpg");
@@ -11,13 +10,7 @@ body {
     background-position: auto;
     background-size: cover;
   }
-.brand {
-  float: left;
-  text-decoration: none;
-  font-family: 'Pacifico';
-  font-size: 19px;
-  color: black;
-}
+
 .muscle {
   text-decoration: none;
   padding: 0.3em 0.3em;
@@ -49,7 +42,7 @@ body {
     position:absolute;
     top:0;
     left:10px;
-    color: rgb(0, 0, 0);
+    color: white;
   }
 
   .border-plan {
@@ -75,7 +68,6 @@ a:hover{
 
 .nav_links :hover{
   color:white;
-    background-color: rgba(156, 155, 155, 0.945);
 }
 .exercise_index {
   background-color: rgba(156, 155, 155, 0.5);
