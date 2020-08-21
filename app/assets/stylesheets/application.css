@@ -1,12 +1,6 @@
 
  /* added background image and font changes  */
-body {
-  background-image: url("background7.jpg");
-  background-attachment: fixed;
-  background-position: auto;
-  background-size: cover;
-    margin: 0;
-  }
+
 
 main {
  padding: 6px 64px;
