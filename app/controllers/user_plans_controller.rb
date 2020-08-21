@@ -3,7 +3,9 @@ class UserPlansController < ApplicationController
     def create 
         @user_plan = UserPlan.new(user_plan_params)
         if @user_plan.save 
-            redirect_to user_path(@user_plan.user)
+            @success = "You have successfully added #{@user_plan.plan.name} to your plans!"
+            @plans = Plan.all
+            render '/plans/index'
         else
             @plan = @user_plan.plan
             # Check if user_plan didn't save due to having no user logged in 

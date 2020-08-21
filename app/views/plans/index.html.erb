@@ -11,6 +11,9 @@
 
     <body>
       <h3 class="top">GET THIS BREAD FITNESS</h3>
+      <% if @success %>
+        <h4 class="plan_added"><%= @success %></h4>
+      <% end %>
             <% @plans.each do |plan| %>
                 <div class= "border-plan">
                     <h1><%= plan.name %></h1>
