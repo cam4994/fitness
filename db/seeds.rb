@@ -66,20 +66,15 @@ bike= Exercise.create(name: "Stationary Bike", category: "Cardio", equipment: "S
 sprints= Exercise.create(name: "Sprinting", category: "Cardio", equipment: "None", image: "usain.jpg", description: "Sprint 40-50 yards at full speed and rest for a minute.")
 
 #PLANS
-plan1= Plan.create(name: "Strong Glutes and Thighs", difficulty: "Moderate", commitment: "2-3 times per week", image: "strong_glutes.jpg", description: "This plan is for anyone who wants to build or tone their hips, thighs and glutes.")
-PlanExercise.create(plan: plan1, exercise: squats, sets: "4 sets of 8-12 reps")
-PlanExercise.create(plan: plan1, exercise: legpress, sets: "4 sets of 8-12 reps")
-PlanExercise.create(plan: plan1, exercise: jump_squat, sets: "3 sets of 12-15 reps")
-PlanExercise.create(plan: plan1, exercise: leg_curls, sets: "4 sets of 8-12 reps")
-PlanExercise.create(plan: plan1, exercise: lunges, sets: "3 sets of 8-12 reps")
-PlanExercise.create(plan: plan1, exercise: stairmaster, sets: "20-30 minutes")
 
-plan2= Plan.create(name: "No Weights Legs", difficulty: "Beginner", commitment: "2-3 times per week", image: "No_weights_legs.jpg", description: "This plan is for anyone who wants to tone their quads, thighs and glutes.")
-PlanExercise.create(plan: plan2, exercise: jump_squat, sets: "5 sets of 15-20 reps")
-PlanExercise.create(plan: plan2, exercise: lunges, sets: "4 sets of 12-15 reps")
-PlanExercise.create(plan: plan2, exercise: reverse_lunges, sets: "4 sets of 12-15 reps")
-PlanExercise.create(plan: plan2, exercise: calf_raises, sets: "4 sets of 12-15 reps")
-PlanExercise.create(plan: plan2, exercise: burpees, sets: "4 sets of 12-15 reps")
+plan11= Plan.create(name: "Boulder Shoulders", difficulty: "Moderate", commitment: "1-2 times per week", image: "shoulder.jpeg", description: "This plan is for anyone looking to build round deltoids and traps that pop.")
+PlanExercise.create(plan: plan11, exercise: barbell_press, sets: "4 sets of 8-10 reps")
+PlanExercise.create(plan: plan11, exercise: military_press, sets: "4 sets of 8-10 reps")
+PlanExercise.create(plan: plan11, exercise: raises, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan11, exercise: cable_reverse, sets: "4 sets of 10-12 reps")
+PlanExercise.create(plan: plan11, exercise: barbell_shrug, sets: "4 sets of 10-12")
+PlanExercise.create(plan: plan11, exercise: stairmaster, sets: "20-30 minutes")
+
 
 plan3= Plan.create(name: "Power Legs", difficulty: "Advanced", commitment: "1-2 times per week", image: "power_legs.jpg", description: "This plan is for those who want to add size on their quads, hamstrings and glutes.")
 PlanExercise.create(plan: plan3, exercise: squats, sets: "5 sets of 4-6 reps")
@@ -88,13 +83,14 @@ PlanExercise.create(plan: plan3, exercise: hack_squat, sets: "4 sets of 6-8 reps
 PlanExercise.create(plan: plan3, exercise: extensions, sets: "4 sets of 10-12 reps")
 PlanExercise.create(plan: plan3, exercise: leg_curls, sets: "4 sets of 10-12 reps")
 
-plan4= Plan.create(name: "Toned Core", difficulty: "Beginner", commitment: "3-4 times per week", image: "toned_core.jpg", description: "This plan is for those who want to tone their mid-section and bring out ab definition.")
-PlanExercise.create(plan: plan4, exercise: v_up, sets: "3 sets of 12-15 reps")
-PlanExercise.create(plan: plan4, exercise: reverse_crunch, sets: "3 sets of 15-20 reps")
-PlanExercise.create(plan: plan4, exercise: heel_taps, sets: "3 sets of 20-25 reps on each side")
-PlanExercise.create(plan: plan4, exercise: side_plank, sets: "3 sets of 30 second holds on each side")
-PlanExercise.create(plan: plan4, exercise: plank, sets: "3 sets of 1 minute holds")
-PlanExercise.create(plan: plan4, exercise: jogging, sets: "20-45 minutes")
+plan1= Plan.create(name: "Strong Glutes and Thighs", difficulty: "Moderate", commitment: "2-3 times per week", image: "strong_glutes.jpg", description: "This plan is for anyone who wants to build or tone their hips, thighs and glutes.")
+PlanExercise.create(plan: plan1, exercise: squats, sets: "4 sets of 8-12 reps")
+PlanExercise.create(plan: plan1, exercise: legpress, sets: "4 sets of 8-12 reps")
+PlanExercise.create(plan: plan1, exercise: jump_squat, sets: "3 sets of 12-15 reps")
+PlanExercise.create(plan: plan1, exercise: leg_curls, sets: "4 sets of 8-12 reps")
+PlanExercise.create(plan: plan1, exercise: lunges, sets: "3 sets of 8-12 reps")
+PlanExercise.create(plan: plan1, exercise: stairmaster, sets: "20-30 minutes")
+
 
 plan5= Plan.create(name: "Shredded Core", difficulty: "Advanced", commitment: "2-3 times per week", image: "shredded.jpg", description: "This plan is for those who want to build ab muscle and condition their abs.")
 PlanExercise.create(plan: plan5, exercise: ab_roller, sets: "3 sets of 12-15 reps")
@@ -140,13 +136,7 @@ PlanExercise.create(plan: plan10, exercise: preacher_curl, sets: "4 sets of 10-1
 PlanExercise.create(plan: plan10, exercise: diamond_pushups, sets: "4 sets to failure")
 PlanExercise.create(plan: plan10, exercise: stairmaster, sets: "20-30 minutes")
 
-plan11= Plan.create(name: "Boulder Shoulders", difficulty: "Moderate", commitment: "1-2 times per week", image: "shoulder.jpeg", description: "This plan is for anyone looking to build round deltoids and traps that pop.")
-PlanExercise.create(plan: plan11, exercise: barbell_press, sets: "4 sets of 8-10 reps")
-PlanExercise.create(plan: plan11, exercise: military_press, sets: "4 sets of 8-10 reps")
-PlanExercise.create(plan: plan11, exercise: raises, sets: "4 sets of 10-12 reps")
-PlanExercise.create(plan: plan11, exercise: cable_reverse, sets: "4 sets of 10-12 reps")
-PlanExercise.create(plan: plan11, exercise: barbell_shrug, sets: "4 sets of 10-12")
-PlanExercise.create(plan: plan11, exercise: stairmaster, sets: "20-30 minutes")
+
 
 plan12= Plan.create(name: "Delt Destroyer", difficulty: "Advanced", commitment: "1-2 times per week", image: "delt.jpg", description: "This plan is for anyone looking to bring their deltoids to the next level.")
 PlanExercise.create(plan: plan12, exercise: barbell_press, sets: "4 sets of 8-10 reps")
@@ -164,6 +154,22 @@ PlanExercise.create(plan: plan13, exercise: dumbbell_row, sets: "4 sets of 10-12
 PlanExercise.create(plan: plan13, exercise: farmers, sets: "Hold until your forearms give out. 3 sets")
 PlanExercise.create(plan: plan13, exercise: bike, sets: "20-30 minutes")
 
+plan4= Plan.create(name: "Toned Core", difficulty: "Beginner", commitment: "3-4 times per week", image: "toned_core.jpg", description: "This plan is for those who want to tone their mid-section and bring out ab definition.")
+PlanExercise.create(plan: plan4, exercise: v_up, sets: "3 sets of 12-15 reps")
+PlanExercise.create(plan: plan4, exercise: reverse_crunch, sets: "3 sets of 15-20 reps")
+PlanExercise.create(plan: plan4, exercise: heel_taps, sets: "3 sets of 20-25 reps on each side")
+PlanExercise.create(plan: plan4, exercise: side_plank, sets: "3 sets of 30 second holds on each side")
+PlanExercise.create(plan: plan4, exercise: plank, sets: "3 sets of 1 minute holds")
+PlanExercise.create(plan: plan4, exercise: jogging, sets: "20-45 minutes")
+
+
+plan2= Plan.create(name: "No Weights Legs", difficulty: "Beginner", commitment: "2-3 times per week", image: "No_weights_legs.jpg", description: "This plan is for anyone who wants to tone their quads, thighs and glutes.")
+PlanExercise.create(plan: plan2, exercise: jump_squat, sets: "5 sets of 15-20 reps")
+PlanExercise.create(plan: plan2, exercise: lunges, sets: "4 sets of 12-15 reps")
+PlanExercise.create(plan: plan2, exercise: reverse_lunges, sets: "4 sets of 12-15 reps")
+PlanExercise.create(plan: plan2, exercise: calf_raises, sets: "4 sets of 12-15 reps")
+PlanExercise.create(plan: plan2, exercise: burpees, sets: "4 sets of 12-15 reps")
+
 plan14= Plan.create(name: "Back of the Future", difficulty: "Beginner", commitment: "1-2 times per week", image: "back2.jpg", description: "This plan is for anyone looking to build a solid back foundation.")
 PlanExercise.create(plan: plan14, exercise: deadlift, sets: "4 sets of 8-12 reps")
 PlanExercise.create(plan: plan14, exercise: pullup, sets: "4 sets to failure")
@@ -174,7 +180,7 @@ PlanExercise.create(plan: plan14, exercise: burpees, sets: "3 sets of 20-25 reps
 
 plan15= Plan.create(name: "Death by Cardio", difficulty: "Beginner", commitment: "3-4 times per week", image: "cardio.jpg", description: "This plan is for anyone looking to shred fat off their body.")
 PlanExercise.create(plan: plan15, exercise: stairmaster, sets: "25 minutes")
-PlanExercise.create(plan: plan15, exercise: sprints, sets: "6 spints at 100%"))
+PlanExercise.create(plan: plan15, exercise: sprints, sets: "6 spints at 100%")
 PlanExercise.create(plan: plan15, exercise: burpees, sets: "3 sets of 20-25 reps")
 
 

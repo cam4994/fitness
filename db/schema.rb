@@ -42,18 +42,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_154340) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "name"
-    t.integer "calories"
-    t.float "carbs"
-    t.float "fat"
-    t.float "protein"
-    t.string "cook_time"
-    t.string "serves"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "user_plans", force: :cascade do |t|
     t.integer "user_id"
     t.integer "plan_id"
@@ -61,15 +49,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_154340) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["plan_id"], name: "index_user_plans_on_plan_id"
     t.index ["user_id"], name: "index_user_plans_on_user_id"
-  end
-
-  create_table "user_recipes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "recipe_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["recipe_id"], name: "index_user_recipes_on_recipe_id"
-    t.index ["user_id"], name: "index_user_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
