@@ -8,6 +8,8 @@ body {
     background-size: cover;
   }
 .plan{
+    background-color: rgba(156, 155, 155, 0.5);
+    border-style: solid;
     border-style: solid;
     border-width: 5px;
     margin-top: 75px;
@@ -15,11 +17,12 @@ body {
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
-    background-color: rgba(156, 155, 155, 0.945);
+    color: white;
 }
 .plan h2{
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color:rgba(250, 138, 10, 0.952);
+    color: #df5709;
+    -webkit-text-stroke: .01px black;
+    -webkit-text-fill-color: 1px #df5709;
     font-size: 42px; 
 }
 
@@ -67,9 +70,14 @@ li {
     padding: 12px;
    }
    li:nth-of-type(2n) {
-    background-color: #80B5E1;
+    background-color: #df5709;
    }
 
+   li a {
+    font-weight: bold;
+    // color: #3E3E3E;
+    margin-right: 16px;
+   }
    li:nth-of-type(2n) a {
     color: #fff;
    }
@@ -85,3 +93,22 @@ li {
   input[type="submit"]:hover {
     background-color: #f9735b;
   }
+
+.plan_index a {
+    color: white;
+}
+
+.plan_index a:hover {
+    color: black;
+}
+
+.title {
+    font-family:'Baloo Chettan 2', cursive;
+     font-size: 60px;
+     text-align: center;
+     color: #df5709;
+     -webkit-text-stroke: .025px white;
+     padding: 4px 0;
+     text-transform: uppercase;
+     letter-spacing: 5px;
+    }

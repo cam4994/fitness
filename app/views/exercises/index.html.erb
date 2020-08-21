@@ -22,9 +22,10 @@
             <a class="muscle" href='/category/cardio'>Cardio<a>
         </div>
 
-        <h1>All Exercises</h1>
+        
        <%# added div %>
        <div class="exercise_index">
+        <h1>All Exercises</h1>
         <ul>
               <% @exercises.each do |exercise| %>
                   <li><%= link_to exercise.name, exercise_path(exercise)%></li>

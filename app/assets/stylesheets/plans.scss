@@ -1,15 +1,28 @@
 // Place all the styles related to the plan controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
 .border-plan {
-    border-style: solid;
-    border-width: 5px;
-    margin-top: 75px;
-    margin-bottom: 75px;
-    margin-right: 300px;
-    margin-left: 300px;
-    text-align: center;
-    background-color: rgba(156, 155, 155, 0.945);
+  // border-style: solid;
+  // border-width: 5px;
+  // margin-top: 75px;
+  // margin-bottom: 75px;
+  // margin-right: 300px;
+  // margin-left: 300px;
+  // text-align: center;
+  // color: white;
+  background-color: rgba(156, 155, 155, 0.5);
+     border-style: solid;
+     border-style: solid;
+       border-width: 5px;
+       margin-top: 75px;
+       margin-bottom: 75px;
+       margin-right: 300px;
+       margin-left: 300px;
+       text-align: center;
+       color: white;
 }
 body {
   background-image: url("background.jpg");
@@ -36,8 +49,8 @@ h1 {
   font-family: 'Cooper Black', cursive;
    text-align: center;
 	font-size: 44px;
-	-webkit-text-stroke: 1px black;
-	-webkit-text-fill-color:rgba(250, 138, 10, 0.952);
+	color: #df5709; 
+    -webkit-text-stroke: .025px black;
    padding: 12px 0;
    text-transform: uppercase;
    letter-spacing: 5px;
@@ -62,7 +75,7 @@ h1 {
   
   // replaced some color and style 
   .plan {
-    background-color: rgba(156, 155, 155, 0.945);
+    background-color: rgba(156, 155, 155, 0.5);
      border-style: solid;
      border-style: solid;
        border-width: 5px;
@@ -72,7 +85,16 @@ h1 {
        margin-left: 300px;
        text-align: center;
    }
-  
+.difficulty {
+  font-family: 'Cooper Black', cursive;
+  text-align: center;
+ font-size: 50px;
+ color: #df5709; 
+   -webkit-text-stroke: .025px white;
+  padding: 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
 .plan h1{ 
     font-family: 'Baloo Chettan 2', cursive;
 }
@@ -83,8 +105,8 @@ h1 {
     border-width: 5px;
     margin-top: 75px;
     margin-bottom: 75px;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 200px;
+    margin-left: 200px;
     text-align: center;
 }
 
@@ -95,7 +117,7 @@ h1 {
       font-size: 18px;
       text-transform: uppercase;
       border: none;
-      background-color: hsla(130, 58%, 43%, 0.74);
+      background-color: rgba(250, 138, 10, 0.952);
       color: #fff;
       font-weight: bold;
       margin: auto;
@@ -109,14 +131,17 @@ h1 {
   border-width: 5px;
   margin-top: 75px;
   margin-bottom: 75px;
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 200px;
+  margin-left: 200px;
   text-align: center;
 }
 
 .plan h3 {
   font-family: 'Baloo Chettan 2', cursive;
-  color: white;
+  color: #df5709; 
+    -webkit-text-stroke: .01px white;
+    // -webkit-text-fill-color: 1px rgba(250, 138, 10, 0.952);
+    font-size: 32px;
 }
 .plan h5{
   color: white;
@@ -141,4 +166,19 @@ h1 {
 
   a:hover {
     color: white;
+  }
+
+  .plan p {
+    color: white;
+  }
+
+  .exercise_list a {
+    color: white; 
+  }
+  .exercise_list a:hover {
+    color: black; 
+  }
+
+  li:nth-of-type(2n) {
+    background-color: #df5709; 
   }
