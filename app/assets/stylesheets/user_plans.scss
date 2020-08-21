@@ -1,7 +1,12 @@
 // Place all the styles related to the user_plans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+body {
+    background-image: url("background6.jpg");
+    background-attachment: fixed;
+    background-position: auto;
+    background-size: cover;
+  }
 .plan{
     border-style: solid;
     border-width: 5px;
@@ -48,7 +53,7 @@ input[type="text"], input[type="password"] {
     position:absolute;
     top:0;
     left:10px;
-    color: rgb(0, 0, 0);
+    color: #df5709;
   }
 
 .title {
@@ -61,11 +66,7 @@ li {
    li:nth-of-type(2n) {
     background-color: #80B5E1;
    }
-   li a {
-    font-weight: bold;
-    color: #3E3E3E;
-    margin-right: 16px;
-   }
+
    li:nth-of-type(2n) a {
     color: #fff;
    }
@@ -76,4 +77,8 @@ li {
 
 .info h5{
       color: white;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #f9735b;
   }

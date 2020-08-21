@@ -17,8 +17,7 @@ body {
 }
 .muscle {
   text-decoration: none;
-  color: white;
-  border: 3px solid rgba(232, 232, 232, 0.9);
+  padding: 0.3em 0.3em;
 }
 
   main {
@@ -47,20 +46,12 @@ body {
     color: rgb(0, 0, 0);
   }
 
-  .border-plan {
-    border-style: solid;
-    border-width: 5px;
-    margin-top: 75px;
-    margin-bottom: 75px;
-    margin-right: 300px;
-    margin-left: 300px;
-    text-align: center;
-}
 a:visited { 
   text-decoration: none; color:#df5709; 
 }
 a {
   color: #df5709;
+  text-decoration: none;
 }
 
 a:hover{
@@ -80,8 +71,4 @@ a:hover{
   margin-left: 300px;
   text-align: center;
   background-color: rgba(156, 155, 155, 0.3);
-}
-
-a {
-  text-decoration: none;
 }

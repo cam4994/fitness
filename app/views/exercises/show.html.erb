@@ -13,26 +13,26 @@
     <h3 class="top">GET THIS BREAD FITNESS</h3>
         <%# added a category menu for consistant nav %>
         <div class="categories">
-          <%= link_to "Chest", '/category/chest' %>
-          <%= link_to "Arms", '/category/arms' %>
-          <%= link_to "Shoulders", '/category/shoulders' %>
-          <%= link_to "Back", '/category/back' %>
-          <%= link_to "Legs", '/category/legs' %>
-          <%= link_to "Abs", '/category/abs' %>
-          <%= link_to "Cardio", '/category/cardio' %>
+            <a class="muscle" href='/category/chest'>Chest<a>
+            <a class="muscle" href='/category/arms'>Arms<a>
+            <a class="muscle" href='/category/shoulders'>Shoulders<a>
+            <a class="muscle" href='/category/back'>Back<a>
+            <a class="muscle" href='/category/legs'>Legs<a>
+            <a class="muscle" href='/category/abs'>Abs<a>
+            <a class="muscle" href='/category/cardio'>Cardio<a>
         </div>
-    <div class="border-plan">
-      <h1><%= @exercise.name %><h1>
+        <div class="border-plan">
+          <h1><%= @exercise.name %><h1>
 
-      <h3>Category: <%= @exercise.category %></h3>
-      <h3>Equipment Needed: <%= @exercise.equipment %></h3>
-      <h4>Description </h4>
-      <p><%= @exercise.description %></p>
-      <% if @exercise.image %>
-          <%= image_tag(@exercise.image, size: "512") %>
-      
-      <% end %>
-    </div>
+          <h3>Category: <%= @exercise.category %></h3>
+          <h3>Equipment Needed: <%= @exercise.equipment %></h3>
+          <h4>Description </h4>
+          <p><%= @exercise.description %></p>
+          <% if @exercise.image %>
+              <%= image_tag(@exercise.image, size: "512") %>
+          
+          <% end %>
+        </div>
 
   </body>
 </html>

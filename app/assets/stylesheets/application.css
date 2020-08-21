@@ -1,13 +1,5 @@
 
  /* added background image and font changes  */
-body {
-
-background-color: black;
-  font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #3E3E3E;
-    margin: 0;
-  }
 
 main {
  padding: 6px 64px;
@@ -44,7 +36,7 @@ input[type="submit"] {
  font-size: 18px;
  text-transform: uppercase;
  border: none;
- background-color: hsl(130, 58%, 43%);
+ background-color: #df5709;
  color: #fff;
  font-weight: bold;
  margin: auto;
@@ -76,7 +68,7 @@ input[value="Log Out"] {
 }
 
 .nav_links :hover{
-  color:#df5709
+  color:white;
 }
 .nav_links li {
   display: inline-block;
@@ -85,4 +77,13 @@ input[value="Log Out"] {
 }
 .navbar {
   text-align: center;
+}
+a {
+  font-weight: bold;
+  color: #df5709;
+  margin-right: 6px;
+  text-decoration: none;
+ }
+ a :hover{
+  color:white;
 }
