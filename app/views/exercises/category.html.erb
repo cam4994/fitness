@@ -20,10 +20,12 @@
             <a class="muscle" href='/category/abs'>Abs<a>
             <a class="muscle" href='/category/cardio'>Cardio<a>
         </div>
+        
+        
+        <%# moved div %>
+        <div class="exercise_index">
         <h1><%= @exercises.first.category %> Exercises</h1>
         <ul>
-            <%# another div %>
-            <div class="exercise_index">
             <% @exercises.each do |exercise| %>
                 <li><%= link_to exercise.name, exercise_path(exercise)%></li>
             <% end %>

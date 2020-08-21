@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .plan{
+    background-color: rgba(156, 155, 155, 0.5);
+    border-style: solid;
     border-style: solid;
     border-width: 5px;
     margin-top: 75px;
@@ -10,11 +12,12 @@
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
-    background-color: rgba(156, 155, 155, 0.945);
+    color: white;
 }
 .plan h2{
-    -webkit-text-stroke: 1px black;
-    -webkit-text-fill-color:rgba(250, 138, 10, 0.952);
+    color: rgba(250, 138, 10, 0.952);
+    -webkit-text-stroke: .01px black;
+    -webkit-text-fill-color: 1px rgba(250, 138, 10, 0.952);
     font-size: 42px; 
 }
 
@@ -59,11 +62,11 @@ li {
     padding: 12px;
    }
    li:nth-of-type(2n) {
-    background-color: #80B5E1;
+    background-color: rgba(250, 138, 10, 0.767);;
    }
    li a {
     font-weight: bold;
-    color: #3E3E3E;
+    // color: #3E3E3E;
     margin-right: 16px;
    }
    li:nth-of-type(2n) a {
@@ -77,3 +80,19 @@ li {
 .info h5{
       color: white;
   }
+
+  a:visited { 
+    text-decoration: none; color:rgba(250, 138, 10, 0.952);; 
+  }
+  a {
+    color: rgba(250, 138, 10, 0.952);;
+  }
+  
+  a:hover{
+    color: white;
+  }
+  
+  .nav_links :hover{
+    color:white;
+  }
+  

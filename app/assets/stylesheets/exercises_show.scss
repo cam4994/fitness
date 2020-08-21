@@ -29,6 +29,8 @@ body {
    font-size: 34px;
    text-align: center;
    color: rgb(255, 69, 0);
+   -webkit-text-stroke: .025px white;
+	-webkit-text-fill-color:1px rgba(250, 138, 10, 0.952);
    padding: 4px 0;
    text-transform: uppercase;
    letter-spacing: 5px;
@@ -55,12 +57,13 @@ body {
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
+    color: white;
 }
 a:visited { 
-  text-decoration: none; color:#df5709; 
+  text-decoration: none; color:rgba(250, 138, 10, 0.952);; 
 }
 a {
-  color: #df5709;
+  color: rgba(250, 138, 10, 0.952);;
 }
 
 a:hover{
