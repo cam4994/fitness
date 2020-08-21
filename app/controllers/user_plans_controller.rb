@@ -3,7 +3,7 @@ class UserPlansController < ApplicationController
     def create 
         @user_plan = UserPlan.new(user_plan_params)
         if @user_plan.save 
-            @success = "You have successfully added #{@user_plan.plan.name} to your plans!"
+            @success = "You have added #{@user_plan.plan.name} to your plans!"
             @plans = Plan.all
             render '/plans/index'
         else
